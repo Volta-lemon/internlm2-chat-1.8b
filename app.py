@@ -47,6 +47,6 @@ def chat(message, history):
 # 设置 gradio 聊天界面
 gr.ChatInterface(
     fn=chat,
-    title="InternLM2-Chat-1.8_4bit,
+    title="internlm2-chat-1_8b-4bit",
     description="""InternLM is mainly developed by Shanghai AI Laboratory."""
 ).queue(1).launch()
