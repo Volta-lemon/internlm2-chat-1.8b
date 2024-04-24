@@ -1,10 +1,10 @@
 import gradio as gr
 import os
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModel
+from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModel, TurbomindEngineConfig
 from transformers import pipeline
-import gradio as gr
 
+backend_config = TurbomindEngineConfig(cache_max_entry_count=0.01,model_format="awq")
 # download internlm2 to the base_path directory using git tool
 base_path = './internlm2-chat-1_8b-4bit'
 os.system(f'git clone https://code.openxlab.org.cn/volta/internlm2-chat-1_8b-4bit.git {base_path}')
