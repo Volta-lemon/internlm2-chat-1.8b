@@ -26,7 +26,7 @@ os.system(f'cd {base_path} && git lfs pull')
 #                  ).queue(1).launch()
 # 初始化 pipeline
 pipe = pipeline(
-    base_path=base_path,
+    './internlm2-chat-1_8b-4bit',
     backend_config=backend_config
 )
 
